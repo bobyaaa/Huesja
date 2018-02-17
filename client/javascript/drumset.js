@@ -1,14 +1,14 @@
 var drums = {};
 var drums2 = {};
-var hihatclosed = new Audio('hihatclosed.mp3');
-var hihatopen = new Audio('hihatopen.mp3');
-var ridecymbal = new Audio('ridecymbal.mp3');
-var crashcymbal = new Audio('crashcymbal.mp3');
-var snarelong = new Audio('snarelong.mp3');
-var snareshort = new Audio('snareshort.mp3');
-var tomtomhigh = new Audio('tomtomhigh.mp3');
-var tomtomlow = new Audio('tomtomlow.mp3');
-var bass = new Audio('bass.mp3');
+var hihatclosed = new Audio('Audio/drums/hihatclosed.mp3');
+var hihatopen = new Audio('Audio/drums/hihatopen.mp3');
+var ridecymbal = new Audio('Audio/drums/ridecymbal.mp3');
+var crashcymbal = new Audio('Audio/drums/crashcymbal.mp3');
+var snarelong = new Audio('Audio/drums/snarelong.mp3');
+var snareshort = new Audio('Audio/drums/snareshort.mp3');
+var tomtomhigh = new Audio('Audio/drums/tomtomhigh.mp3');
+var tomtomlow = new Audio('Audio/drums/tomtomlow.mp3');
+var bass = new Audio('Audio/drums/bass.mp3');
 
 function start(){
 	drumming.start();
@@ -61,8 +61,8 @@ function updateDrums() {
     }
     if (drums[71]&&!drums2[71]){
         snareshort.pause();
-        snareshort.currentTime = 0;
         snareshort.play();
+        snareshort.currentTime = 0;
         drums2[71] = true;
     }
     if (drums[72]&&!drums2[72]){
