@@ -15,14 +15,13 @@ app.use(express.static(path.join(__dirname, 'client')));
 
 var io = require('socket.io')(http,{}); 
 var SOCKET_LIST = {};
-var roomList = {};
 
 io.sockets.on('connection', function(socket) {
 
-	console.log("someone has entered the room");
+	console.log("An entity has connected to the server.");
 	socket.id = Math.random();
-	socket.room = 0; 
+	socket.room = null; 
 	SOCKET_LIST[socket.id] = socket; 
-
-	socket.emit('Enter');
+	
+	
 });
