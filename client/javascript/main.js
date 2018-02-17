@@ -1,0 +1,10 @@
+$(document).ready(function(){
+	$(".solo").click(function(){
+		$(".screen1").fadeOut(250);
+		$(".screen2").fadeIn(250);
+	})
+	$(".multi").click(function(){
+		$(".screen1").fadeOut(250);
+		$(".screen2").fadeIn(250);
+	})
+})

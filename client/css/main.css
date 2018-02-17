@@ -18,6 +18,16 @@ body{
 	padding-bottom:2.5vh;
 }
 
+.header2{
+	font-family:"Raleway", sans-serif;
+	font-size:4vw;
+	color:white;
+	background-color:black;
+	padding-top:2.5vh;
+	padding-bottom:2.5vh;
+	text-align:center;
+}
+
 .footer{
 	background-color:black;
 	width:100%;
@@ -91,4 +101,8 @@ body{
 	margin-left:2.5vw;
 	font-size:2vw;
 	line-height:2.1vh;
+}
+
+.piano{
+	background-image:url("piano");
 }
