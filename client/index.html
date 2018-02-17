@@ -6,15 +6,14 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="javascript/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="javascript/main.js"></script>
+	<script type="text/javascript" src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
 </head>
 <body>
-
-
 
 	<div class="header">
 		<h class="poo">Online Orchestra</h>
 	</div>
-	
+
 	<div class="screen1">
 		<div class="background">	
 			<div class="trans">
@@ -22,13 +21,14 @@
 			<div class="standard">
 				<p>An online concert</p>
 				<p>experience.</p>
-				<p>Play by yourself</p><p> or with friends.</p>
+				<div><p>Play by yourself</p></div>
+				<div><p> or with friends.</p></div>
 				<br>
 				<div class="solo">
-			<h>Solo</h>
+			<h onclick="isMultiplayer(false)">Solo</h>
 		</div>
 		<div class="multi">
-			<h>Concert</h>
+			<h onclick="isMultiplayer(true)">Concert</h>
 		</div>
 			</div>
 		</div>
@@ -45,5 +45,13 @@
 		<div class="guitar">
 		</div>
 	</div>
+
+	<script>
+		var socket = io();
+
+		function isMultiplayer(boole) {
+			socket.emit('gameSetting', boole);
+		}
+	</script>
 </body>
 </html>
