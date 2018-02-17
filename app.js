@@ -20,8 +20,16 @@ io.sockets.on('connection', function(socket) {
 
 	console.log("An entity has connected to the server.");
 	socket.id = Math.random();
+	socket.isMultiplayer = null;
 	socket.room = null; 
+	socket.instrument = null; 
 	SOCKET_LIST[socket.id] = socket; 
 	
-	
+	socket.on('gameSetting', function(boole) {
+		socket.isMultiplayer = boole; 
+		console.log(socket.isMultiplayer); 
+	});
+
+	//Quit functionality below
+
 });
