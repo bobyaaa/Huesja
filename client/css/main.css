@@ -8,6 +8,15 @@ body{
 	src:url(Georgia.ttf);
 }
 
+.input{
+	text-align:center;
+	margin:auto;
+	width:20vw;
+	height:5vh;
+	border-radius:15px;
+	margin-left:40vw;
+}
+
 .header{
 	padding-left:2vw;
 	font-family:"Raleway", sans-serif;
