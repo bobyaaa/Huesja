@@ -32,6 +32,7 @@ io.sockets.on('connection', function(socket) {
 
 	socket.on('chooseInstrument', function(instrum) {
 		socket.instrument = instrum;
+		console.log(socket.instrument); 
 	});
 
 	//Quit functionality below
