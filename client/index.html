@@ -24,10 +24,10 @@
 				<div><p>Play by yourself</p></div>
 				<div><p> or with friends.</p></div>
 				<br>
-				<div class="solo">
+				<div class="solo" id="han" onclick="return false">
 			<h onclick="isMultiplayer(false)">Solo</h>
 		</div>
-		<div class="multi">
+		<div class="multi" id="player" onclick="return true">
 			<h onclick="isMultiplayer(true)">Concert</h>
 		</div>
 			</div>
@@ -39,8 +39,25 @@
 	<div class="header2">
 		<h class="poo">Pick your instrument</h>
 	</div>
+
+	<table class="table">
+		<tr>
+			<th><img class="image" id="piano" src="../images/piano.png"></th>
+			<th><img class="image" id="drums" src="../images/drums.png"></th>
+		</tr>
+		<tr>
+			<th><img class="image" id="guitar" src="../images/guitar.png"></th>
+			<th><img class="image" id="violin" src="../images/violin.png"></th>
+		</tr>
+	</table>
+	</div>
+
+	<div class="screen21">
+	<div class="header2">
+		<h class="poo">Pick your instrument</h>
+	</div>
 	<form>
-		<input type="text" class="input" placeholder="Enter your name">
+		<input type="text" id="field" class="input" placeholder="Enter your name">
 	</form>	
 
 	<table class="table">
@@ -201,11 +218,6 @@
 
  	</div>
 
- 	<script>
- 		var yoloswag = function() {
- 			console.log("eoyoeoy");
- 		}
- 	</script>
 
 	<script>
 		var socket = io();

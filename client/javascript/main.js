@@ -1,10 +1,10 @@
 $(document).ready(function(){
 	$(".screen2").hide();
+	$(".screen21").hide();
 	$(".screenPiano").hide();
 	$(".screenDrums").hide();
 	$(".screenViolin").hide();
 	$(".screenGuitar").hide();
-
 
 	$(".solo").click(function(){
 		$(".screen1").fadeOut(250);
@@ -14,7 +14,7 @@ $(document).ready(function(){
 
 	$(".multi").click(function(){
 		$(".screen1").fadeOut(250);
-		$(".screen2").fadeIn(250);
+		$(".screen21").fadeIn(250);
 	})
 
 	$("#piano").click(function(){
@@ -40,3 +40,6 @@ $(document).ready(function(){
 	})
 
 })
+
+
+
