@@ -26,6 +26,7 @@ body{
 	padding-top:2.5vh;
 	padding-bottom:2.5vh;
 	text-align:center;
+	margin-bottom:10vh;
 }
 
 .footer{
@@ -103,6 +104,23 @@ body{
 	line-height:2.1vh;
 }
 
-.piano{
-	background-image:url("piano");
+.image{
+	height:20vmin;
+	width:20vmin;
+	display:inline-block;
+	cursor:pointer;
 }
+
+.piano{
+
+}
+
+.table{
+	margin-top:25vh;
+	margin:auto;
+}
+
+th,td{
+	padding:3vw;
+}
+
