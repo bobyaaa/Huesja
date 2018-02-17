@@ -31,5 +31,8 @@ io.sockets.on('connection', function(socket) {
 	});
 
 	//Quit functionality below
-
+	socket.on('disconnect', function() {
+		delete SOCKET_LIST[socket.id]; 
+		//Add more functionality later..
+	});
 });
