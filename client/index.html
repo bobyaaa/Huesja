@@ -62,12 +62,12 @@
 
 	<table class="table">
 		<tr>
-			<th><img class="image" id="piano" src="../images/piano.png"></th>
-			<th><img class="image" id="drums" src="../images/drums.png"></th>
+			<th><img onclick="chooseInstrument('piano')" class="image" id="piano" src="../images/piano.png"></th>
+			<th><img onclick="chooseInstrument('drums')" class="image" id="drums" src="../images/drums.png"></th>
 		</tr>
 		<tr>
-			<th><img class="image" id="guitar" src="../images/guitar.png"></th>
-			<th><img class="image" id="violin" src="../images/violin.png"></th>
+			<th><img onclick="chooseInstrument('guitar')" class="image" id="guitar" src="../images/guitar.png"></th>
+			<th><img onclick="chooseInstrument('violin')" class="image" id="violin" src="../images/violin.png"></th>
 		</tr>
 	</table>
 	</div>
@@ -224,6 +224,10 @@
 
 		function isMultiplayer(boole) {
 			socket.emit('gameSetting', boole);
+		}
+
+		function chooseInstrument(instrument) {
+			socket.emit('chooseInstrument', instrument);
 		}
 	</script>
 </body>

@@ -30,9 +30,14 @@ io.sockets.on('connection', function(socket) {
 		console.log(socket.isMultiplayer); 
 	});
 
+	socket.on('chooseInstrument', function(instrum) {
+		socket.instrument = instrum;
+	});
+
 	//Quit functionality below
 	socket.on('disconnect', function() {
 		delete SOCKET_LIST[socket.id]; 
 		//Add more functionality later..
 	});
+
 });
