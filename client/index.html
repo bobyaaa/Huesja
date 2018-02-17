@@ -1,1 +1,18 @@
-﻿Hello, World!
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Orchestra</title>
+	<script type="text/javascript" src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+</head>
+<body>
+
+<script>
+	var socket = io();
+
+	socket.on('Enter', function() {
+		console.log('Proof of concept');
+	});
+
+</script>
+</body>
+</html>

@@ -23,4 +23,6 @@ io.sockets.on('connection', function(socket) {
 	socket.id = Math.random();
 	socket.room = 0; 
 	SOCKET_LIST[socket.id] = socket; 
+
+	socket.emit('Enter');
 });
