@@ -41,6 +41,7 @@ body{
 	width:100vw;
 	height:86vh;
 	margin:auto;
+	background-size:cover;
 }
 
 .trans{
@@ -109,10 +110,6 @@ body{
 	width:20vmin;
 	display:inline-block;
 	cursor:pointer;
-}
-
-.piano{
-
 }
 
 .table{
