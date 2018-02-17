@@ -1,0 +1,94 @@
+body{
+	margin:0;
+	overflow:hidden;
+}
+
+@font-face{
+	font-family:Georgia;
+	src:url(Georgia.ttf);
+}
+
+.header{
+	padding-left:2vw;
+	font-family:"Raleway", sans-serif;
+	font-size:4vw;
+	color:white;
+	background-color:black;
+	padding-top:2.5vh;
+	padding-bottom:2.5vh;
+}
+
+.footer{
+	background-color:black;
+	width:100%;
+	height:7vh;
+	float:bottom;
+}
+
+.background{
+	background-image:url("../images/orchestrass.jpg");
+	width:100vw;
+	height:86vh;
+	margin:auto;
+}
+
+.trans{
+	background-color:black;
+	opacity:0.75;
+	width:25vw;
+	height:86vh;
+	margin:auto;
+	float:left;
+}
+
+.solo{
+	margin-top:10vh;
+	margin-right:10vw;
+	font-family:"Raleway", sans-serif;
+	font-size:2vw;
+	color:black;
+	background-color:#aab0b7;
+	border-radius:25px;
+	width:15vw;
+	transition:0.5s;
+	height:5vh;
+	text-align:center;
+	padding-top:2.5vh;
+}
+
+.solo:hover{
+	background-color:white;
+	color:black;
+	cursor:pointer;
+}
+
+.multi{
+	padding-top:2.5vh;
+	margin-top:2.5vh;
+	margin-right:10vw;
+	text-align:center;
+	font-family:"Raleway", sans-serif;
+	font-size:2vw;
+	color:black;
+	width:15vw;
+	background-color:#aab0b7;
+	border-radius:25px;
+	transition:0.5s;
+	height:5vh;
+}
+
+.multi:hover{
+	background-color:white;
+	color:black;
+	cursor:pointer;
+}
+
+.standard{
+	padding-top:2.5vh;
+	color:#aab0b7;
+	font-family:"Raleway", sans-serif;
+	position:absolute;
+	margin-left:2.5vw;
+	font-size:2vw;
+	line-height:2.1vh;
+}

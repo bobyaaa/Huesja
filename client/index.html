@@ -1,18 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Online Orchestra</title>
-	<script type="text/javascript" src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="javascript/main.js"></script>
 </head>
 <body>
+	<div class="header">
+		<h>Online Orchestra</h>
 
-<script>
-	var socket = io();
+	</div>
+	<div class="background">	
+		<div class="trans">
+		</div>
+		<div class="standard">
+			<p>An online concert</p>
+			<p>experience.</p>
+			<p>Play by yourself</p><p> or with friends.</p>
+			<br>
 
-	socket.on('Enter', function() {
-		console.log('Proof of concept');
-	});
+			<div class="solo">
+		<h>Solo</h>
+	</div>
+	<div class="multi">
+		<h>Concert</h>
+	</div>
+		</div>
+	
+	</div>
 
-</script>
+
 </body>
 </html>
