@@ -1,5 +1,6 @@
 var vchords = {};
 var vchords2 = {};
+var violin = [];
 var aSharp = new Audio('javascript/Audio/violin/Asharp.mp3');
 var a = new Audio('javascript/Audio/violin/A.mp3');
 var b = new Audio('javascript/Audio/violin/B.mp3');
@@ -12,6 +13,20 @@ var fSharp = new Audio('javascript/Audio/violin/Fsharp.mp3');
 var f = new Audio('javascript/Audio/violin/F.mp3');
 var gSharp = new Audio('javascript/Audio/violin/Gsharp.mp3');
 var g = new Audio('javascript/Audio/violin/G.mp3');
+
+violin.push(aSharp);
+violin.push(a); 
+violin.push(b);
+violin.push(cSharp);
+violin.push(c); 
+violin.push(dSharp);
+violin.push(d);
+violin.push(_e);
+violin.push(fSharp);
+violin.push(fSharp);
+violin.push(f);
+violin.push(gSharp); 
+violin.push(g); 
 
 function startViolin(){
 	violinChords.start();

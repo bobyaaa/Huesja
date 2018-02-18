@@ -1,5 +1,6 @@
 var chords = {};
 var chords2 = {};
+var guitar = [];
 var aMajor = new Audio('javascript/Audio/guitar/A-major.mp3');
 var bMajor = new Audio('javascript/Audio/guitar/B-major.mp3');
 var cMajor = new Audio('javascript/Audio/guitar/C-major.mp3');
@@ -7,6 +8,8 @@ var dMajor = new Audio('javascript/Audio/guitar/D-major.mp3');
 var eMajor = new Audio('javascript/Audio/guitar/E-major.mp3');
 var fMajor = new Audio('javascript/Audio/guitar/F-major.mp3');
 var gMajor = new Audio('javascript/Audio/guitar/G-major.mp3');
+
+guitar.push(aMajor); 
 
 function startGuitar(){
 	guitarChords.start();
