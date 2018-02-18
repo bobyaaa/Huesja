@@ -76,7 +76,7 @@ io.sockets.on('connection', function(socket) {
 			}
 		}
 	});
-	
+
 	socket.on('whatRoom', function() {
 		socket.emit('roomNumber', socket.room);
 	});
@@ -94,8 +94,18 @@ io.sockets.on('connection', function(socket) {
 
 	//Quit functionality below
 	socket.on('disconnect', function() {
+		var roomNumber = socket.room;
 		delete SOCKET_LIST[socket.id]; 
+		var members = displayNames(roomNumber); //the ID's of members.
+
+		for (var i in SOCKET_LIST) {
+			if (SOCKET_LIST[i].room == roomNumber) {
+				temp = SOCKET_LIST[i]; 
+				temp.emit('displayNames', members, roomNumber);
+			}
+		}
 		//Add more functionality later..
+
 	});
 
 
