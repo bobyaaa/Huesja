@@ -64,6 +64,26 @@ body{
 	padding-bottom:4vh;
 }
 
+.tom2{
+	position:absolute;
+	margin-top:14vh;
+	margin-left:52vw;
+	z-index:5;
+	border-radius:50%;
+	width:4vw;
+	padding-bottom:4vh;
+}
+
+.hihat{
+	position:absolute;
+	margin-top:14vh;
+	margin-left:52vw;
+	z-index:5;
+	border-radius:50%;
+	width:4vw;
+	padding-bottom:4vh;
+}
+
 .ride:hover{
 	cursor:pointer;
 }
@@ -72,6 +92,12 @@ body{
 	cursor:pointer;
 }
 .tom1:hover{
+	cursor:pointer;
+}
+.tom2:hover{
+	cursor:pointer;
+}
+.hihat:hover{
 	cursor:pointer;
 }
 
