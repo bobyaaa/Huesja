@@ -94,6 +94,17 @@ function startPiano(){
 	pianoKeys.start();
 }
 
+function key1(){
+	pianoC2.pause();
+	pianoC2.currentTime = 0;
+	pianoC2.play();
+	keys2[81] = true;
+	document.getElementById("key1").style.backgroundColor = "grey";
+	setInterval(function(){
+		document.getElementById("key1").style.backgroundColor = "transparent";
+	},250);
+}
+
 var pianoKeys = {
     start : function() {
     	this.interval = setInterval(updateKeys,1);

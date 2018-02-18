@@ -13,29 +13,7 @@ body{
 	color:black;
 }
 
-/*.notes{
-	margin-top:10vh;
-	margin-left:38.5vw;
-	font-family:"Raleway",sans-serif;
-}*/
 
-.block{
-	float:left;
-	padding-left:35vw;
-}
-
-.barrier{
-	width:100%;
-}
-
-.note{
-	float:left;
-	padding-left:2vw;
-}
-
-/*.note{
-	padding:1vw;
-}*/
 
 .input{
 	text-align:center;
