@@ -145,6 +145,7 @@ function startPiano(){
 
 function unpress(key){
 	if (octave==1){
+			document.getElementById("poopoo").src="../images/piano1.jpg"
             if (key==81){ //white keys (Q-U)
 					document.getElementById("key1").style.backgroundColor="transparent";
             }
@@ -221,6 +222,7 @@ function unpress(key){
 					document.getElementById("key25").style.backgroundColor="transparent";
             }
         }else if (octave==2){
+        	document.getElementById("poopoo").src="../images/piano2.jpg"
                 if (key==81){ //white keys (Q-U)
 					document.getElementById("key13").style.backgroundColor="transparent";
                 }
@@ -297,6 +299,7 @@ function unpress(key){
 					document.getElementById("key36").style.backgroundColor="transparent";
             }
         }else if (octave==3){
+        	document.getElementById("poopoo").src="../images/piano3.jpg"
                 if (key==81){ //white keys (Q-U)
 					document.getElementById("key20").style.backgroundColor="transparent";
                 }
@@ -373,6 +376,7 @@ function unpress(key){
 					document.getElementById("key48").style.backgroundColor="transparent";
             }
         }else if (octave==4){
+        	document.getElementById("poopoo").src="../images/piano4.jpg"
                 if (key==81){ //white keys (Q-U)
 					document.getElementById("key37").style.backgroundColor="transparent";
                 }
