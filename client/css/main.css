@@ -172,6 +172,43 @@ body{
 	text-align:center;
 	margin-bottom:10vh;
 }
+.bookshelf{
+	font-family:"Raleway",sans-serif;
+	font-size:35px;
+	border:black 1.5px solid;
+	border-radius:20px;
+	width:25vw;
+	float:left;
+	transition:0.5s;
+	margin-right:5vw;
+	margin-bottom:5vh;
+}
+
+.bookshelf1{
+	font-family:"Raleway",sans-serif;
+	font-size:35px;
+	border:black 1.5px solid;
+	border-radius:20px;
+	width:25vw;
+	float:left;
+	transition:0.5s;
+	margin-right:5vw;
+	margin-left:22vw;
+	margin-bottom:5vh;
+}
+
+.bookshelf:hover{
+	background-color: black;
+	cursor:pointer;
+	color:white;
+}
+
+.bookshelf1:hover{
+	background-color: black;
+	cursor:pointer;
+	color:white;
+}
+
 .header4{
 	font-family:"Raleway", sans-serif;
 	font-size:120px;
