@@ -13,7 +13,10 @@ body{
 	color:black;
 }
 
-
+.book{
+	width:50vw;
+	height:65vh;
+}
 
 .input{
 	text-align:center;

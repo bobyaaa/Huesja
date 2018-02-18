@@ -19,6 +19,11 @@ body{
 	font-size:1.5vw;
 }
 
+.book{
+	width:75vw;
+	height:65vh;
+}
+
 .header{
 	padding-left:2vw;
 	font-family:"Raleway", sans-serif;
@@ -83,6 +88,11 @@ body{
 	background-color:white;
 	color:black;
 	cursor:pointer;
+}
+
+.book{
+	width:30vw;
+	height:30vw;
 }
 
 .multi{
