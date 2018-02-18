@@ -65,12 +65,12 @@
 
 			<table class="table">
 				<tr>
-					<th><img onclick="chooseInstrument('piano');flag(1)" class="image" id="pianomulti" src="../images/piano.png"></th>
-					<th><img onclick="chooseInstrument('drums');flag(2)" class="image" id="drumsmulti" src="../images/drums.png"></th>
+					<th><img onclick="updateName();chooseInstrument('piano');flag(1)" class="image" id="pianomulti" src="../images/piano.png"></th>
+					<th><img onclick="updateName();chooseInstrument('drums');flag(2)" class="image" id="drumsmulti" src="../images/drums.png"></th>
 				</tr>
 				<tr>
-					<th><img onclick="chooseInstrument('guitar');flag(3)" class="image" id="guitarmulti" src="../images/guitar.png"></th>
-					<th><img onclick="chooseInstrument('violin');flag(4)" class="image" id="violinmulti" src="../images/violin.png"></th>
+					<th><img onclick="updateName();chooseInstrument('guitar');flag(3)" class="image" id="guitarmulti" src="../images/guitar.png"></th>
+					<th><img onclick="updateName();chooseInstrument('violin');flag(4)" class="image" id="violinmulti" src="../images/violin.png"></th>
 				</tr>
 			</table>
 		</div>
@@ -238,7 +238,11 @@
 
 		function chooseInstrument(instrument) {
 			socket.emit('chooseInstrument', instrument);
-	      	var roomNumber = document.getElementById("username").value;
+		}
+
+		function updateName() {
+			var username = document.getElementById("username").value;
+			socket.emit('updateUsername', username);
 		}
 
 		function joinroom() {
@@ -292,7 +296,7 @@
 
 		    console.log('--------------');
 		    for (var i = 0; i < members.length; i++) {
-		      console.log(members[i]); 
+		      console.log(members[i].name); 
 		    }
 		});
 
