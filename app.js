@@ -24,14 +24,14 @@ io.sockets.on('connection', function(socket) {
 	socket.isMultiplayer = null;
 	socket.room = null; 
 	socket.instrument = null; 
-	socket.name = null; 
+	socket.name = 'NoName'; 
 	SOCKET_LIST[socket.id] = socket; 
 
 	function displayNames(room) {
 		var members = [];
 		for (var i in SOCKET_LIST) {
 			if (room == SOCKET_LIST[i].room) {
-				members.push(SOCKET_LIST[i].id);
+				members.push(SOCKET_LIST[i].name); //Normally socket_list[i].id
 			}
 		}
 		return members; //Return id's of people in the room
@@ -45,6 +45,10 @@ io.sockets.on('connection', function(socket) {
 	socket.on('chooseInstrument', function(instrum) {
 		socket.instrument = instrum;
 		console.log(socket.instrument); 
+	});
+
+	socket.on('updateUsername', function(username) {
+		socket.name = username; 
 	});
 
 	socket.on('newRoom', function(roomNumber) {
