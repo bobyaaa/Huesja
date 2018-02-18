@@ -7,6 +7,7 @@ $(document).ready(function(){
 	$(".screenGuitar").hide();
 	$(".multiplayer").hide();
 	$(".header3").hide();
+	$(".ugly").hide();
 
 	$(".solo").click(function(){
 		$(".screen1").fadeOut(250);
@@ -17,6 +18,7 @@ $(document).ready(function(){
 	$(".multi").click(function(){
 		$(".screen1").fadeOut(250);
 		$(".screen21").fadeIn(250);
+		$(".ugly").fadeIn(250);
 	});
 
 	$("#piano").click(function(){
