@@ -41,44 +41,6 @@ var violinChords = {
         window.addEventListener('keyup', function (e) {
             vchords[e.keyCode] = false;
             vchords2[e.keyCode] = false;
-            if (e.keyCode==65){
-            	aSharp.pause();
-            	aSharp.currentTime = 0;
-            	a.pause();
-            	a.currentTime = 0;
-            }
-            if (e.keyCode==66){
-            	b.pause();
-            	b.currentTime = 0;
-            }
-            if (e.keyCode==67){
-            	cSharp.pause();
-            	cSharp.currentTime = 0;
-            	c.pause();
-            	c.currentTime = 0;
-            }
-            if (e.keyCode==68){
-            	dSharp.pause();
-            	dSharp.currentTime = 0;
-            	d.pause();
-            	d.currentTime = 0;
-            }
-            if (e.keyCode==69){
-            	_e.pause();
-            	_e.currentTime = 0;
-            }
-            if (e.keyCode==70){
-            	fSharp.pause();
-            	fSharp.currentTime = 0;
-            	f.pause();
-            	f.currentTime = 0;
-            }
-            if (e.keyCode==71){
-            	gSharp.pause();
-            	gSharp.currentTime = 0;
-            	g.pause();
-            	g.currentTime = 0;
-            }
         })
     }
 }
