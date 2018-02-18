@@ -149,6 +149,27 @@ body{
 	text-align:center;
 	margin-bottom:10vh;
 }
+.header4{
+	font-family:"Raleway", sans-serif;
+	font-size:120px;
+	margin-top:0;
+	position:absolute;
+	margin-left:7vw;
+}
+
+.text{
+	font-family:"Raleway",sans-serif;
+	font-size:45px;
+	margin-left:9vw;
+	position:absolute;
+	margin-top:34vh;
+}
+
+.zoom{
+	height:100vh;
+	z-index:-5;
+	float:right;
+}
 
 .footer{
 	background-color:black;
@@ -255,11 +276,21 @@ th,td{
 	height:25vh;
 }
 
+.info{
+	margin-top:60vh;
+	font-family:"Raleway",sans-serif;
+	font-size:25px;
+	text-align:center;
+	line-height:10px;
+
+}
+
 .key{
 	width:2.759vw;
 	height:25vh;
 	float:left;
 	opacity:0.3;
+	border-radius:10px;
 }
 .blackKey1{
 	width:1.3vw;
