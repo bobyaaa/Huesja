@@ -27,6 +27,11 @@ body{
 	border:black,2px,solid;
 }
 
+.poo{
+	text-decoration:none;
+	color:white;
+}
+
 .greet{
 	font-family:"Raleway",sans-serif;
 	font-size:45px;
@@ -39,6 +44,8 @@ body{
 	border-radius:15px;
 	font-family:"Raleway", sans-serif;
 	font-size:1.5vw;
+	text-align:center;
+/*	padding-left:2vw;*/
 }
 
 .book{
