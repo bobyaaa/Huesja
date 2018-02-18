@@ -146,6 +146,7 @@ th,td{
 	width:100vw;
 	z-index:-5;
 	position:absolute;
+	height:25vh;
 }
 
 .key{

@@ -163,12 +163,6 @@ function keypress(key,ind){
 	keys2[key] = true;
 }
 
-function keypress2(ind){
-	piano[ind].pause();
-	piano[ind].currentTime = 0;
-	piano[ind].play();
-}
-
 function updateKeys() {  
 	if (keys[16]&&octave<4&&!keys2[16]){
 		octave += 1;
