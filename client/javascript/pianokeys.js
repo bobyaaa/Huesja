@@ -157,6 +157,7 @@ var pianoKeys = {
 }
 
 function keypress(key,ind){
+
 	piano[ind].pause();
 	piano[ind].currentTime = 0;
 	piano[ind].play();
@@ -166,7 +167,8 @@ function keypress(key,ind){
 	setInterval(function(){
 		document.getElementById(tempkey).style.backgroundColor="transparent";
 	},250);
-
+	
+	socket.emit('highlightPlayer'); 
 	socket.emit('globalSound', ind);
 }
 

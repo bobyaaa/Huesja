@@ -36,6 +36,16 @@ io.sockets.on('connection', function(socket) {
 		}
 		return members; //Return id's of people in the room
 	}
+
+	function returnID(room) {
+		var ID = [];
+		for (var i in SOCKET_LIST) {
+			if (room == SOCKET_LIST[i].room) {
+				ID.push(SOCKET_LIST[i].id); 
+			}
+		}
+		return ID; 
+	}
 	
 	socket.on('gameSetting', function(boole) {
 		socket.isMultiplayer = boole; 
@@ -91,11 +101,12 @@ io.sockets.on('connection', function(socket) {
 
 	socket.on('showPlayers', function(roomNumber) {
 		var members = displayNames(roomNumber); //the ID's of members.
+		var IDs = returnID(roomNumber);
 
 		for (var i in SOCKET_LIST) {
 			if (SOCKET_LIST[i].room == roomNumber) {
 				temp = SOCKET_LIST[i]; 
-				temp.emit('displayNames', members, roomNumber);
+				temp.emit('displayNames', members, roomNumber, IDs);
 			}
 		}
 	});
@@ -108,9 +119,36 @@ io.sockets.on('connection', function(socket) {
 			for (var i in SOCKET_LIST) {
 				if (SOCKET_LIST[i].room == roomNumber) {
 					temp = SOCKET_LIST[i];
-					temp.emit('playSound', number);
+					temp.emit('playSound', number, temp.id);
 				}
 			}			
+		}
+	});
+
+	socket.on('playDrums', function(number) {
+		var roomNumber = socket.room;
+
+		if (roomNumber !== null) {
+			for (var i in SOCKET_LIST) {
+				if (SOCKET_LIST[i].room == roomNumber) {
+					temp = SOCKET_LIST[i];
+					temp.emit('playDrums', number, temp.id);
+				}
+			}			
+		}
+	});
+
+	socket.on('highlightPlayer', function() {
+		var roomNumber = socket.room;
+		var socketID = socket.id; 
+
+		if (roomNumber !== null) {
+			for (var i in SOCKET_LIST) {
+				if (SOCKET_LIST[i].room == roomNumber) {
+					temp = SOCKET_LIST[i]; 
+					temp.emit('highlightMe', socketID); 
+				}
+			}
 		}
 	});
 
