@@ -166,6 +166,8 @@ function keypress(key,ind){
 	setInterval(function(){
 		document.getElementById(tempkey).style.backgroundColor="transparent";
 	},250);
+
+	socket.emit('globalSound', ind);
 }
 
 function keypress2(ind){

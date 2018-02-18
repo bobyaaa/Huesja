@@ -64,6 +64,20 @@ $(document).ready(function(){
 	});
 
 });
+var instrument = 1;
 
+function flag(i){
+	instrument = i;
+}
 
-
+function setinstrument(){
+	if (instrument==1){
+		startPiano();
+	}else if (instrument==2){
+		startDrums();
+	}else if (instrument==3){
+		startGuitar();
+	}else if (instrument==4){
+		startViolin();
+	}
+}

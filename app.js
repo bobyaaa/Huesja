@@ -96,12 +96,18 @@ io.sockets.on('connection', function(socket) {
 		console.log("global?"); 
 		var roomNumber = socket.room;
 
-		for (var i in SOCKET_LIST) {
-			if (SOCKET_LIST[i].room == roomNumber) {
-				temp = SOCKET_LIST[i];
-				temp.emit('playSound', number);
-			}
+		if (roomNumber !== null) {
+			for (var i in SOCKET_LIST) {
+				if (SOCKET_LIST[i].room == roomNumber) {
+					temp = SOCKET_LIST[i];
+					temp.emit('playSound', number);
+				}
+			}			
 		}
+	});
+
+	socket.on('Yolotest', function() {
+		console.log("YOLOOOOOOOOOOO");
 	});
 
 	//Quit functionality below
