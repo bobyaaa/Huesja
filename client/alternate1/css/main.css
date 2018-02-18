@@ -19,6 +19,10 @@ body{
 	margin-left:25vw;
 }
 
+.dvd{
+	margin-top:-50vh;
+}
+
 .input{
 	text-align:center;
 	margin:auto;
@@ -146,6 +150,7 @@ th,td{
 .keyboard{
 	width:100vw;
 	z-index:-5;
+	height:25vh;
 	position:absolute;
 }
 

@@ -5,6 +5,7 @@ $(document).ready(function(){
 	$(".screenDrums").hide();
 	$(".screenViolin").hide();
 	$(".screenGuitar").hide();
+	
 
 	$(".solo").click(function(){
 		$(".screen1").fadeOut(250);

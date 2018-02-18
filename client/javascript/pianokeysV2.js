@@ -161,6 +161,9 @@ function keypress(key,ind){
 	piano[ind].currentTime = 0;
 	piano[ind].play();
 	keys2[key] = true;
+	var tempkey = "key" + String(ind+1);
+	console.log(tempkey);
+	document.getElementById(tempkey).style.backgroundColor="black";
 }
 
 function updateKeys() {  
