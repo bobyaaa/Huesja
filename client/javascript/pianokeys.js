@@ -466,6 +466,25 @@ var pianoKeys = {
     }
 }
 
+function interval(func, wait, times){
+    var interv = function(w, t){
+        return function(){
+            if(typeof t === "undefined" || t-- > 0){
+                setTimeout(interv, w);
+                try{
+                    func.call(null);
+                }
+                catch(e){
+                    t = 0;
+                    throw e.toString();
+                }
+            }
+        };
+    }(wait, times);
+
+    setTimeout(interv, wait);
+};
+
 function keypress(key,ind){
 	piano[ind].pause();
 	piano[ind].currentTime = 0;
@@ -484,9 +503,9 @@ function keypress2(ind){
 	piano[ind].play();
 	var tempkey = "key" + String(ind+1);
 	document.getElementById(tempkey).style.backgroundColor="black";
-	setInterval(function(){
+	interval(function(){
 		document.getElementById(tempkey).style.backgroundColor="transparent";
-	},250);
+	},250,1);
 }
 
 function updateKeys() {  
