@@ -65,23 +65,23 @@
 
 			<table class="table">
 				<tr>
-					<th><img onclick="chooseInstrument('piano')" class="image" id="pianomulti" src="../images/piano.png"></th>
-					<th><img onclick="chooseInstrument('drums')" class="image" id="drumsmulti" src="../images/drums.png"></th>
+					<th><img onclick="chooseInstrument('piano');flag(1)" class="image" id="pianomulti" src="../images/piano.png"></th>
+					<th><img onclick="chooseInstrument('drums');flag(2)" class="image" id="drumsmulti" src="../images/drums.png"></th>
 				</tr>
 				<tr>
-					<th><img onclick="chooseInstrument('guitar')" class="image" id="guitarmulti" src="../images/guitar.png"></th>
-					<th><img onclick="chooseInstrument('violin')" class="image" id="violinmulti" src="../images/violin.png"></th>
+					<th><img onclick="chooseInstrument('guitar');flag(3)" class="image" id="guitarmulti" src="../images/guitar.png"></th>
+					<th><img onclick="chooseInstrument('violin');flag(4)" class="image" id="violinmulti" src="../images/violin.png"></th>
 				</tr>
 			</table>
 		</div>
 
 		<div class="multiplayer">
 			Welcome to the multiplayer lobby screen.
-			<button onclick="joinroom()">Join Room</button>
+			<button onclick="joinroom();setinstrument();">Join Room</button>
 			<form>
 				<input type="text" id="roomvalue" class="input" placeholder="Enter Room #">
 			</form>	
-			<button onclick="createroom()">Create Room</button>
+			<button onclick="createroom();setinstrument();">Create Room</button>
 		</div>
 
 		<div class="screenPiano">
