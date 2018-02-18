@@ -19,6 +19,28 @@ body{
 	font-size:1.5vw;
 }
 
+.ovall{
+	width:60vw;
+	margin:auto;
+	border-radius:30px;
+	background-color:"green";
+	border:black,2px,solid;
+}
+
+.greet{
+	font-family:"Raleway",sans-serif;
+	font-size:45px;
+}
+
+.input1{
+	margin:auto;
+	width:20vw;
+	height:5vh;
+	border-radius:15px;
+	font-family:"Raleway", sans-serif;
+	font-size:1.5vw;
+}
+
 .book{
 	position:absolute;
 	width:75vw;
@@ -179,6 +201,10 @@ body{
 	float:left;
 }
 
+.ugly{
+	text-align:center;
+}
+
 .zoom{
 	height:100vh;
 	z-index:-5;
@@ -290,6 +316,8 @@ th,td{
 	height:25vh;
 }
 
+
+
 .info{
 	margin-top:60vh;
 	font-family:"Raleway",sans-serif;
@@ -297,6 +325,11 @@ th,td{
 	text-align:center;
 	line-height:10px;
 
+}
+
+.foot{
+	float:bottom;
+	
 }
 
 .key{
