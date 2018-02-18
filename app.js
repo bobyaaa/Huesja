@@ -15,6 +15,7 @@ app.use(express.static(path.join(__dirname, 'client')));
 
 var io = require('socket.io')(http,{}); 
 var SOCKET_LIST = {};
+var roomList = {};
 
 io.sockets.on('connection', function(socket) {
 
@@ -23,7 +24,18 @@ io.sockets.on('connection', function(socket) {
 	socket.isMultiplayer = null;
 	socket.room = null; 
 	socket.instrument = null; 
+	socket.name = null; 
 	SOCKET_LIST[socket.id] = socket; 
+
+	function displayNames(room) {
+		var members = [];
+		for (var i in SOCKET_LIST) {
+			if (room == SOCKET_LIST[i].room) {
+				members.push(SOCKET_LIST[i].id);
+			}
+		}
+		return members; //Return id's of people in the room
+	}
 	
 	socket.on('gameSetting', function(boole) {
 		socket.isMultiplayer = boole; 
@@ -35,10 +47,56 @@ io.sockets.on('connection', function(socket) {
 		console.log(socket.instrument); 
 	});
 
+	socket.on('newRoom', function(roomNumber) {
+		if (roomNumber in roomList) {
+			socket.emit('invalidRoom');
+		} else {
+			roomList[roomNumber] = 1; 
+			socket.room = roomNumber; 
+			socket.emit('lobby'); 
+		}
+
+		console.log(roomNumber);
+	});
+
+	socket.on('joinRoom', function(roomNumber) {
+		if (roomNumber in roomList) {
+			roomList.roomNumber += 1; 
+			socket.room = roomNumber;
+			socket.emit('lobby');
+		} else {
+			socket.emit('invalidRoom'); 
+		}
+
+		console.log("-------------"); 
+		for (var i in SOCKET_LIST) {
+			if (SOCKET_LIST[i].room == roomNumber) {
+				temp = SOCKET_LIST[i]; 
+				console.log(temp.id);
+			}
+		}
+	});
+	
+	socket.on('whatRoom', function() {
+		socket.emit('roomNumber', socket.room);
+	});
+
+	socket.on('showPlayers', function(roomNumber) {
+		var members = displayNames(roomNumber); //the ID's of members.
+
+		for (var i in SOCKET_LIST) {
+			if (SOCKET_LIST[i].room == roomNumber) {
+				temp = SOCKET_LIST[i]; 
+				temp.emit('displayNames', members, roomNumber);
+			}
+		}
+	});
+
 	//Quit functionality below
 	socket.on('disconnect', function() {
 		delete SOCKET_LIST[socket.id]; 
 		//Add more functionality later..
 	});
+
 
 });

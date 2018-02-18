@@ -58,7 +58,7 @@
 			<h class="poo">Pick your instrument</h>
 		</div>
 		<form>
-			<input type="text" id="field" class="input" placeholder="Enter your name">
+			<input type="text" id="username" class="input" placeholder="Enter your name">
 		</form>	
 
 		<table class="table">
@@ -75,6 +75,11 @@
 
 	<div class="multiplayer">
 		Welcome to the multiplayer lobby screen.
+		<button onclick="joinroom()">Join Room</button>
+		<form>
+			<input type="text" id="roomvalue" class="input" placeholder="Enter Room #">
+		</form>	
+		<button onclick="createroom()">Create Room</button>
 	</div>
 
 	<div class="screenPiano">
@@ -231,7 +236,44 @@
 
 		function chooseInstrument(instrument) {
 			socket.emit('chooseInstrument', instrument);
+	      	var roomNumber = document.getElementById("username").value;
 		}
+
+		function joinroom() {
+	    	var roomNumber = document.getElementById("roomvalue").value;
+	     	if (roomNumber == "") {
+	        	alert("The field is empty");
+	      	} else {
+	        	socket.emit('joinRoom', roomNumber); 
+	      	}
+		}
+
+		function createroom() {
+	      	var roomNumber = Math.floor(Math.random() * 100000); 
+	      
+	      	socket.emit('newRoom', roomNumber); 
+		}
+		
+		socket.on('invalidRoom', function() {
+		    alert("There is no such room! (Either that or you ran into the rare case of a duplicate room generation!"); 
+		});
+		
+		socket.on('lobby', function() {
+		    //Throw this dude into the lobby
+		    socket.emit('whatRoom');
+		});
+
+		socket.on('roomNumber', function(roomNumber) {
+		    socket.emit('showPlayers', roomNumber);    
+		}); 
+
+		socket.on('displayNames', function(members, roomNumber){
+		    console.log('--------------');
+		    for (var i = 0; i < members.length; i++) {
+		      console.log(members[i]); 
+		    }
+		});
+
 	</script>
 </body>
 </html>

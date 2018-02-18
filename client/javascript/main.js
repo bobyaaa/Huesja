@@ -45,6 +45,21 @@ $(document).ready(function(){
 		$(".multiplayer").fadeIn(250);
 	});
 
+	$("#drumsmulti").click(function(){
+		$(".screen21").fadeOut(250);
+		$(".multiplayer").fadeIn(250);
+	});	
+
+	$("#violinmulti").click(function(){
+		$(".screen21").fadeOut(250);
+		$(".multiplayer").fadeIn(250);
+	});
+
+	$("#guitarmulti").click(function(){
+		$(".screen21").fadeOut(250);
+		$(".multiplayer").fadeIn(250);
+	});
+
 });
 
 
