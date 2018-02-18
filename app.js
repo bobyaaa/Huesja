@@ -151,6 +151,19 @@ io.sockets.on('connection', function(socket) {
 		}
 	});
 
+	socket.on('playViolin', function(number) {
+		var roomNumber = socket.room;
+
+		if (roomNumber !== null) {
+			for (var i in SOCKET_LIST) {
+				if (SOCKET_LIST[i].room == roomNumber) {
+					temp = SOCKET_LIST[i];
+					temp.emit('playViolin', number, temp.id); 
+				}
+			}
+		}
+	});
+
 	socket.on('highlightPlayer', function() {
 		var roomNumber = socket.room;
 		var socketID = socket.id; 

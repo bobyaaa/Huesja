@@ -88,8 +88,12 @@
 				<br>
 				<input type="text" id="roomvalue" class="input1" placeholder="Enter Room #">
 			</form>	
+
 			<br>
 			<button onclick="createroom();setinstrument();">Create Room</button>
+
+			<button onclick="crea teroom();setinstrument();">Create Room</button>
+
 		</div>
 		<div>
 			<img src="images/fun.jpg" class="foot">
@@ -331,6 +335,12 @@
 			guitar[number].pause();
 			guitar[number].currentTime = 0;
 			guitar[number].play(); 
+		});
+
+		socket.on('playViolin', function(number, SocketID) {
+			violin[number].pause();
+			violin[number].currentTime = 0;
+			violin[number].play();
 		});
 
 		socket.on('highlightMe', function(ID) {
