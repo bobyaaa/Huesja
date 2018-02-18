@@ -42,7 +42,7 @@ body{
 	z-index:5;
 	border-radius:50%;
 	width:6vw;
-	padding-bottom:4vh;
+	padding-bottom:10vh;
 }
 .ride{
 	position:absolute;
@@ -51,7 +51,7 @@ body{
 	z-index:5;
 	border-radius:50%;
 	width:6vw;
-	padding-bottom:4vh;
+	padding-bottom:10vh;
 }
 
 .tom1{
@@ -61,7 +61,7 @@ body{
 	z-index:5;
 	border-radius:50%;
 	width:6vw;
-	padding-bottom:4vh;
+	padding-bottom:8vh;
 }
 
 .tom2{
@@ -71,17 +71,41 @@ body{
 	z-index:5;
 	border-radius:50%;
 	width:4vw;
-	padding-bottom:4vh;
+	padding-bottom:8vh;
 }
 
 .hihat{
 	position:absolute;
-	margin-top:14vh;
-	margin-left:52vw;
+	margin-top:22vh;
+	margin-left:37vw;
 	z-index:5;
 	border-radius:50%;
-	width:4vw;
-	padding-bottom:4vh;
+	width:6vw;
+	padding-bottom:10vh;
+}
+
+.snare{
+	position:absolute;
+	margin-top:32vh;
+	margin-left:43vw;
+	z-index:5;
+	border-radius:50%;
+	width:6vw;
+	padding-bottom:8vh;
+}
+
+.bass{
+	position:absolute;
+	margin-top:45vh;
+	margin-left:48vw;
+	z-index:5;
+	border-radius:50%;
+	width:5vw;
+	padding-bottom:15vh;
+}
+
+.bass:hover{
+	cursor:pointer;
 }
 
 .ride:hover{
@@ -98,6 +122,9 @@ body{
 	cursor:pointer;
 }
 .hihat:hover{
+	cursor:pointer;
+}
+.snare:hover{
 	cursor:pointer;
 }
 
