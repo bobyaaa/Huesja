@@ -230,6 +230,8 @@
 	<script>
 		var socket = io();
 
+		var soundtest = new Audio('javascript/Audio/piano/Piano.ff.D3.mp3');
+
 		function isMultiplayer(boole) {
 			socket.emit('gameSetting', boole);
 		}
@@ -253,6 +255,16 @@
 	      
 	      	socket.emit('newRoom', roomNumber); 
 		}
+
+		function globalSound() {
+			socket.emit('globalSound');
+		}
+
+		socket.on('playSound', function() {
+			soundtest.pause();
+			soundtest.currentTime = 0;
+			soundtest.play();	
+		});
 		
 		socket.on('invalidRoom', function() {
 		    alert("There is no such room! (Either that or you ran into the rare case of a duplicate room generation!"); 
@@ -268,7 +280,7 @@
 		}); 
 
 		socket.on('displayNames', function(members, roomNumber){
-		    document.getElementById("wrapper").innerHTML = "<div id='musicians'>Room Number:" + roomNumber + "</div>";
+		    document.getElementById("wrapper").innerHTML = "<div id='musicians'>Room Number:" + roomNumber + "</div><button onclick='globalSound()'>GlobalSound</button>";
 		    
 		    for (var i in members) {
 			    var node = document.createElement("LI");
