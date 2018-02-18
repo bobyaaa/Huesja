@@ -9,229 +9,228 @@
 	<script type="text/javascript" src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
 	<script type="text/javascript" src="javascript/pianokeys.js"></script>
 </head>
-<body id="wrapper">
+<body>
+<div id="wrapper2">
+</div>
+	<div id="wrapper">
+		<div class="screen1">
+		<div class="header">
+			<h class="poo">Online Orchestra</h>
+		</div>
 
-	<div class="screen1">
-	<div class="header">
-		<h class="poo">Online Orchestra</h>
-	</div>
-
-		<div class="background">	
-			<div class="trans">
+			<div class="background">	
+				<div class="trans">
+				</div>
+				<div class="standard">
+					<p>An online concert</p>
+					<p>experience.</p>
+					<div><p>Play by yourself</p></div>
+					<div><p> or with friends.</p></div>
+					<br>
+					<div class="solo" id="han" onclick="return false">
+				<h onclick="isMultiplayer(false)">Solo</h>
 			</div>
-			<div class="standard">
-				<p>An online concert</p>
-				<p>experience.</p>
-				<div><p>Play by yourself</p></div>
-				<div><p> or with friends.</p></div>
-				<br>
-				<div class="solo" id="han" onclick="return false">
-			<h onclick="isMultiplayer(false)">Solo</h>
-		</div>
-		<div class="multi" id="player" onclick="return true">
-			<h onclick="isMultiplayer(true)">Concert</h>
-		</div>
+			<div class="multi" id="player" onclick="return true">
+				<h onclick="isMultiplayer(true)">Concert</h>
+			</div>
+				</div>
 			</div>
 		</div>
-	</div>
 
 
-	<div class="screen2">
-	<div class="header2">
-		<h class="poo">Pick your instrument</h>
-	</div>
-
-	<table class="table">
-		<tr>
-			<th><img onclick="chooseInstrument('piano');startPiano();" class="image" id="piano" src="../images/piano.png"></th>
-			<th><img onclick="chooseInstrument('drums');startDrums();" class="image" id="drums" src="../images/drums.png"></th>
-		</tr>
-		<tr>
-			<th><img onclick="chooseInstrument('guitar');startGuitar();" class="image" id="guitar" src="../images/guitar.png"></th>
-			<th><img onclick="chooseInstrument('violin')" class="image" id="violin" src="../images/violin.png"></th>
-		</tr>
-	</table>
-	</div>
-
-	<div class="screen21">
+		<div class="screen2">
 		<div class="header2">
 			<h class="poo">Pick your instrument</h>
 		</div>
-		<form>
-			<input type="text" id="username" class="input" placeholder="Enter your name">
-		</form>	
 
 		<table class="table">
 			<tr>
-				<th><img onclick="chooseInstrument('piano')" class="image" id="pianomulti" src="../images/piano.png"></th>
-				<th><img onclick="chooseInstrument('drums')" class="image" id="drumsmulti" src="../images/drums.png"></th>
+				<th><img onclick="chooseInstrument('piano');startPiano();" class="image" id="piano" src="../images/piano.png"></th>
+				<th><img onclick="chooseInstrument('drums');startDrums();" class="image" id="drums" src="../images/drums.png"></th>
 			</tr>
 			<tr>
-				<th><img onclick="chooseInstrument('guitar')" class="image" id="guitarmulti" src="../images/guitar.png"></th>
-				<th><img onclick="chooseInstrument('violin')" class="image" id="violinmulti" src="../images/violin.png"></th>
+				<th><img onclick="chooseInstrument('guitar');startGuitar();" class="image" id="guitar" src="../images/guitar.png"></th>
+				<th><img onclick="chooseInstrument('violin')" class="image" id="violin" src="../images/violin.png"></th>
 			</tr>
 		</table>
+		</div>
+
+		<div class="screen21">
+			<div class="header2">
+				<h class="poo">Pick your instrument</h>
+			</div>
+			<form>
+				<input type="text" id="username" class="input" placeholder="Enter your name">
+			</form>	
+
+			<table class="table">
+				<tr>
+					<th><img onclick="chooseInstrument('piano')" class="image" id="pianomulti" src="../images/piano.png"></th>
+					<th><img onclick="chooseInstrument('drums')" class="image" id="drumsmulti" src="../images/drums.png"></th>
+				</tr>
+				<tr>
+					<th><img onclick="chooseInstrument('guitar')" class="image" id="guitarmulti" src="../images/guitar.png"></th>
+					<th><img onclick="chooseInstrument('violin')" class="image" id="violinmulti" src="../images/violin.png"></th>
+				</tr>
+			</table>
+		</div>
+
+		<div class="multiplayer">
+			Welcome to the multiplayer lobby screen.
+			<button onclick="joinroom()">Join Room</button>
+			<form>
+				<input type="text" id="roomvalue" class="input" placeholder="Enter Room #">
+			</form>	
+			<button onclick="createroom()">Create Room</button>
+		</div>
+
+		<div class="screenPiano">
+			<div class="header2">
+			<h class="poo">Piano</h>
+			</div>
+			<img src="../images/piano1.jpg" class="keyboard">
+	<!-- 
+			<button onclick="yoloswag()" style="position:absolute">res</button> -->
+			<div class="key" onclick="keypress2(0)" id="key1">
+			</div>
+			<div class="key" onclick="keypress2(1)" id="key2">
+			</div>
+			<div class="key" onclick="keypress2(2)" id="key3">
+			</div>
+			<div class="key" onclick="keypress2(3)" id="key4">
+			</div>
+			<div class="key" onclick="keypress2(4)" id="key5">
+			</div>
+			<div class="key" onclick="keypress2(5)" id="key6">
+			</div>
+			<div class="key" onclick="keypress2(6)" id="key7">
+			</div>
+			<div class="key" onclick="keypress2(12)" id="key13">
+			</div>
+			<div class="key" onclick="keypress2(13)" id="key14">
+			</div>
+			<div class="key" onclick="keypress2(14)" id="key15">
+			</div>
+			<div class="key" onclick="keypress2(15)" id="key16">
+			</div>
+			<div class="key" onclick="keypress2(16)" id="key17">
+			</div>
+			<div class="key" onclick="keypress2(17)" id="key18">
+			</div>
+			<div class="key" onclick="keypress2(18)" id="key19">
+			</div>
+			<div class="key" onclick="keypress2(19)" id="key20">
+			</div>
+			<div class="key" onclick="keypress2(25)" id="key26">
+			</div>
+			<div class="key" onclick="keypress2(26)" id="key27">
+			</div>
+			<div class="key" onclick="keypress2(27)" id="key28">
+			</div>
+			<div class="key" onclick="keypress2(28)" id="key29">
+			</div>
+			<div class="key" onclick="keypress2(29)" id="key30">
+			</div>
+			<div class="key" onclick="keypress2(30)" id="key31">
+			</div>
+			<div class="key" onclick="keypress2(36)" id="key37">
+			</div>
+			<div class="key" onclick="keypress2(37)" id="key38">
+			</div>
+			<div class="key" onclick="keypress2(38)" id="key39">
+			</div>
+			<div class="key" onclick="keypress2(39)" id="key40">
+			</div>
+			<div class="key" onclick="keypress2(40)" id="key41">
+			</div>
+			<div class="key" onclick="keypress2(41)" id="key42">
+			</div>
+			<div class="key" onclick="keypress2(42)" id="key43">
+			</div>
+			<div class="key" onclick="keypress2(48)" id="key49">
+			</div>
+			<div class="key" onclick="keypress2(49)" id="key50">
+			</div>
+			<div class="key" onclick="keypress2(50)" id="key51">
+			</div>
+			<div class="key" onclick="keypress2(51)" id="key52">
+			</div>
+			<div class="key" onclick="keypress2(52)" id="key53">
+			</div>
+			<div class="key" onclick="keypress2(53)" id="key54">
+			</div>
+			<div class="key" onclick="keypress2(54)" id="key55">
+			</div>
+			<div class="key" onclick="keypress2(60)" id="key61">
+			</div>
+
+			<div class="blackKey1" onclick="keypress2(7)" id="key8">
+			</div>
+			<div class="blackKey2" onclick="keypress2(8)" id="key9">
+			</div>
+			<div class="blackKey3" onclick="keypress2(9)" id="key10">
+	        </div>
+	        <div class="blackKey4" onclick="keypress2(10)" id="key11">
+	        </div>
+	        <div class="blackKey5" onclick="keypress2(11)" id="key12">
+	        </div>
+	        <div class="blackKey6" onclick="keypress2(20)" id="key21">
+	        </div>
+	        <div class="blackKey7" onclick="keypress2(21)" id="key22">
+	        </div>
+	                <div class="blackKey8" onclick="keypress2(22) " id="key23">
+	                </div>
+	                <div class="blackKey9" onclick="keypress2(23)" id="key24">
+	                </div>
+	                <div class="blackKey10" onclick="keypress2(24)" id="key25">
+	                </div>
+	                <div class="blackKey11" onclick="keypress2(31)" id="key32">
+	                </div>
+	                <div class="blackKey12" onclick="keypress2(32)" id="key33">
+	                </div>
+	                <div class="blackKey13" onclick="keypress2(33)" id="key34">
+	                </div>
+	                <div class="blackKey14" onclick="keypress2(34)" id="key35">
+	                </div>
+	                <div class="blackKey15" onclick="keypress2(35)" id="key36">
+	                </div>
+	                <div class="blackKey16" onclick="keypress2(43)" id="key44">
+	                </div>
+	                <div class="blackKey17" onclick="keypress2(44)" id="key45">
+	                </div>
+	                <div class="blackKey18" onclick="keypress2(45)" id="key46">
+	                </div>
+	                <div class="blackKey19" onclick="keypress2(46)" id="key47">
+	                </div>
+	                <div class="blackKey20" onclick="keypress2(47)" id="key48">
+	                </div>
+	                <div class="blackKey21" onclick="keypress2(55)" id="key56">
+	                </div>
+	                <div class="blackKey22" onclick="keypress2(56)" id="key57">
+	                </div>
+	                <div class="blackKey23" onclick="keypress2(57)" id="key58">
+	                </div>
+	                <div class="blackKey24" onclick="keypress2(58)" id="key59">
+	                </div>
+	                <div class="blackKey25" onclick="keypress2(59)" id="key60">
+	                </div>
+		</div>
+
+		<div class="screenDrums">
+			<img src="images/drumset.png" class="book">
+		</div>
+
+	 	<div class="screenGuitar">
+
+	 	</div>
+
+	 	<div class="screenViolin">
+
+	 	</div>
 	</div>
-
-	<div class="multiplayer">
-		Welcome to the multiplayer lobby screen.
-		<button onclick="joinroom()">Join Room</button>
-		<form>
-			<input type="text" id="roomvalue" class="input" placeholder="Enter Room #">
-		</form>	
-		<button onclick="createroom()">Create Room</button>
-	</div>
-
-	<div class="screenPiano">
-		<div class="header2">
-		<h class="poo">Piano</h>
-		</div>
-		<img src="../images/piano1.jpg" class="keyboard">
-<!-- 
-		<button onclick="yoloswag()" style="position:absolute">res</button> -->
-		<div class="key" onclick="keypress2(0)" id="key1">
-		</div>
-		<div class="key" onclick="keypress2(1)" id="key2">
-		</div>
-		<div class="key" onclick="keypress2(2)" id="key3">
-		</div>
-		<div class="key" onclick="keypress2(3)" id="key4">
-		</div>
-		<div class="key" onclick="keypress2(4)" id="key5">
-		</div>
-		<div class="key" onclick="keypress2(5)" id="key6">
-		</div>
-		<div class="key" onclick="keypress2(6)" id="key7">
-		</div>
-		<div class="key" onclick="keypress2(12)" id="key13">
-		</div>
-		<div class="key" onclick="keypress2(13)" id="key14">
-		</div>
-		<div class="key" onclick="keypress2(14)" id="key15">
-		</div>
-		<div class="key" onclick="keypress2(15)" id="key16">
-		</div>
-		<div class="key" onclick="keypress2(16)" id="key17">
-		</div>
-		<div class="key" onclick="keypress2(17)" id="key18">
-		</div>
-		<div class="key" onclick="keypress2(18)" id="key19">
-		</div>
-		<div class="key" onclick="keypress2(19)" id="key20">
-		</div>
-		<div class="key" onclick="keypress2(25)" id="key26">
-		</div>
-		<div class="key" onclick="keypress2(26)" id="key27">
-		</div>
-		<div class="key" onclick="keypress2(27)" id="key28">
-		</div>
-		<div class="key" onclick="keypress2(28)" id="key29">
-		</div>
-		<div class="key" onclick="keypress2(29)" id="key30">
-		</div>
-		<div class="key" onclick="keypress2(30)" id="key31">
-		</div>
-		<div class="key" onclick="keypress2(36)" id="key37">
-		</div>
-		<div class="key" onclick="keypress2(37)" id="key38">
-		</div>
-		<div class="key" onclick="keypress2(38)" id="key39">
-		</div>
-		<div class="key" onclick="keypress2(39)" id="key40">
-		</div>
-		<div class="key" onclick="keypress2(40)" id="key41">
-		</div>
-		<div class="key" onclick="keypress2(41)" id="key42">
-		</div>
-		<div class="key" onclick="keypress2(42)" id="key43">
-		</div>
-		<div class="key" onclick="keypress2(48)" id="key49">
-		</div>
-		<div class="key" onclick="keypress2(49)" id="key50">
-		</div>
-		<div class="key" onclick="keypress2(50)" id="key51">
-		</div>
-		<div class="key" onclick="keypress2(51)" id="key52">
-		</div>
-		<div class="key" onclick="keypress2(52)" id="key53">
-		</div>
-		<div class="key" onclick="keypress2(53)" id="key54">
-		</div>
-		<div class="key" onclick="keypress2(54)" id="key55">
-		</div>
-		<div class="key" onclick="keypress2(60)" id="key61">
-		</div>
-
-		<div class="blackKey1" onclick="keypress2(7)" id="key8">
-		</div>
-		<div class="blackKey2" onclick="keypress2(8)" id="key9">
-		</div>
-		<div class="blackKey3" onclick="keypress2(9)" id="key10">
-        </div>
-        <div class="blackKey4" onclick="keypress2(10)" id="key11">
-        </div>
-        <div class="blackKey5" onclick="keypress2(11)" id="key12">
-        </div>
-        <div class="blackKey6" onclick="keypress2(20)" id="key21">
-        </div>
-        <div class="blackKey7" onclick="keypress2(21)" id="key22">
-        </div>
-                <div class="blackKey8" onclick="keypress2(22) " id="key23">
-                </div>
-                <div class="blackKey9" onclick="keypress2(23)" id="key24">
-                </div>
-                <div class="blackKey10" onclick="keypress2(24)" id="key25">
-                </div>
-                <div class="blackKey11" onclick="keypress2(31)" id="key32">
-                </div>
-                <div class="blackKey12" onclick="keypress2(32)" id="key33">
-                </div>
-                <div class="blackKey13" onclick="keypress2(33)" id="key34">
-                </div>
-                <div class="blackKey14" onclick="keypress2(34)" id="key35">
-                </div>
-                <div class="blackKey15" onclick="keypress2(35)" id="key36">
-                </div>
-                <div class="blackKey16" onclick="keypress2(43)" id="key44">
-                </div>
-                <div class="blackKey17" onclick="keypress2(44)" id="key45">
-                </div>
-                <div class="blackKey18" onclick="keypress2(45)" id="key46">
-                </div>
-                <div class="blackKey19" onclick="keypress2(46)" id="key47">
-                </div>
-                <div class="blackKey20" onclick="keypress2(47)" id="key48">
-                </div>
-                <div class="blackKey21" onclick="keypress2(55)" id="key56">
-                </div>
-                <div class="blackKey22" onclick="keypress2(56)" id="key57">
-                </div>
-                <div class="blackKey23" onclick="keypress2(57)" id="key58">
-                </div>
-                <div class="blackKey24" onclick="keypress2(58)" id="key59">
-                </div>
-                <div class="blackKey25" onclick="keypress2(59)" id="key60">
-                </div>
-
-	</div>
-
-	<div class="screenDrums">
-		<img src="images/drumset.png" class="book">
-	</div>
-
- 	<div class="screenGuitar">
-
- 	</div>
-
- 	<div class="screenViolin">
-
- 	</div>
-
 
 	<script>
 		var socket = io();
-
-		var soundtest = new Audio('javascript/Audio/piano/Piano.ff.D3.mp3');
 
 		function isMultiplayer(boole) {
 			socket.emit('gameSetting', boole);
@@ -257,14 +256,14 @@
 	      	socket.emit('newRoom', roomNumber); 
 		}
 
-		function globalSound() {
-			socket.emit('globalSound');
+		function globalSound(number) {
+			socket.emit('globalSound', number);
 		}
 
-		socket.on('playSound', function() {
-			soundtest.pause();
-			soundtest.currentTime = 0;
-			soundtest.play();	
+		socket.on('playSound', function(number) {
+			piano[number].pause();
+			piano[number].currentTime = 0;
+			piano[number].play();
 		});
 		
 		socket.on('invalidRoom', function() {
@@ -281,6 +280,7 @@
 		}); 
 
 		socket.on('displayNames', function(members, roomNumber){
+			document.getElementById("wrapper2").innerHTML = '<div class="screenPiano"><div class="header2"><h class="poo">Piano</h></div><img src="../images/piano1.jpg" class="keyboard"><div class="key" onclick="globalSound(0);keypress2(0)" id="key1"></div><div class="key" onclick="keypress2(1)" id="key2"></div><div class="key" onclick="keypress2(2)" id="key3"></div><div class="key" onclick="keypress2(3)" id="key4"></div><div class="key" onclick="keypress2(4)" id="key5"></div><div class="key" onclick="keypress2(5)" id="key6"></div><div class="key" onclick="keypress2(6)" id="key7"></div><div class="key" onclick="keypress2(12)" id="key13"></div><div class="key" onclick="keypress2(13)" id="key14"></div><div class="key" onclick="keypress2(14)" id="key15"></div><div class="key" onclick="keypress2(15)" id="key16"></div><div class="key" onclick="keypress2(16)" id="key17"></div><div class="key" onclick="keypress2(17)" id="key18"></div><div class="key" onclick="keypress2(18)" id="key19"></div><div class="key" onclick="keypress2(19)" id="key20"></div><div class="key" onclick="keypress2(25)" id="key26"></div><div class="key" onclick="keypress2(26)" id="key27"></div><div class="key" onclick="keypress2(27)" id="key28"></div><div class="key" onclick="keypress2(28)" id="key29"></div><div class="key" onclick="keypress2(29)" id="key30"></div><div class="key" onclick="keypress2(30)" id="key31"></div><div class="key" onclick="keypress2(36)" id="key37"></div><div class="key" onclick="keypress2(37)" id="key38"></div><div class="key" onclick="keypress2(38)" id="key39"></div><div class="key" onclick="keypress2(39)" id="key40"></div><div class="key" onclick="keypress2(40)" id="key41"></div><div class="key" onclick="keypress2(41)" id="key42"></div><div class="key" onclick="keypress2(42)" id="key43"></div><div class="key" onclick="keypress2(48)" id="key49"></div><div class="key" onclick="keypress2(49)" id="key50"></div><div class="key" onclick="keypress2(50)" id="key51"></div><div class="key" onclick="keypress2(51)" id="key52"></div><div class="key" onclick="keypress2(52)" id="key53"></div><div class="key" onclick="keypress2(53)" id="key54"></div><div class="key" onclick="keypress2(54)" id="key55"></div><div class="key" onclick="keypress2(60)" id="key61"></div><div class="blackKey1" onclick="keypress2(7)" id="key8"></div><div class="blackKey2" onclick="keypress2(8)" id="key9"></div><div class="blackKey3" onclick="keypress2(9)" id="key10"></div><div class="blackKey4" onclick="keypress2(10)" id="key11"></div><div class="blackKey5" onclick="keypress2(11)" id="key12"></div><div class="blackKey6" onclick="keypress2(20)" id="key21"></div><div class="blackKey7" onclick="keypress2(21)" id="key22"></div><div class="blackKey8" onclick="keypress2(22) " id="key23"></div><div class="blackKey9" onclick="keypress2(23)" id="key24"></div><div class="blackKey10" onclick="keypress2(24)" id="key25"></div><div class="blackKey11" onclick="keypress2(31)" id="key32"></div><div class="blackKey12" onclick="keypress2(32)" id="key33"></div><div class="blackKey13" onclick="keypress2(33)" id="key34"></div><div class="blackKey14" onclick="keypress2(34)" id="key35"></div><div class="blackKey15" onclick="keypress2(35)" id="key36"></div><div class="blackKey16" onclick="keypress2(43)" id="key44"></div><div class="blackKey17" onclick="keypress2(44)" id="key45"></div><div class="blackKey18" onclick="keypress2(45)" id="key46"></div><div class="blackKey19" onclick="keypress2(46)" id="key47"></div><div class="blackKey20" onclick="keypress2(47)" id="key48"></div><div class="blackKey21" onclick="keypress2(55)" id="key56"></div><div class="blackKey22" onclick="keypress2(56)" id="key57"></div><div class="blackKey23" onclick="keypress2(57)" id="key58"></div><div class="blackKey24" onclick="keypress2(58)" id="key59"></div><div class="blackKey25" onclick="keypress2(59)" id="key60"></div></div>'
 		    document.getElementById("wrapper").innerHTML = "<div id='musicians'>Room Number:" + roomNumber + "</div><button onclick='globalSound()'>GlobalSound</button>";
 		    
 		    for (var i in members) {

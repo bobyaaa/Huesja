@@ -92,13 +92,14 @@ io.sockets.on('connection', function(socket) {
 		}
 	});
 
-	socket.on('globalSound', function() {
+	socket.on('globalSound', function(number) {
+		console.log("global?"); 
 		var roomNumber = socket.room;
 
 		for (var i in SOCKET_LIST) {
 			if (SOCKET_LIST[i].room == roomNumber) {
 				temp = SOCKET_LIST[i];
-				temp.emit('playSound');
+				temp.emit('playSound', number);
 			}
 		}
 	});
