@@ -42,6 +42,7 @@ body{
 }
 
 .book{
+	z-index: -22011;
 	position:absolute;
 	width:75vw;
 	height:65vh;
