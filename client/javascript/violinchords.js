@@ -7,7 +7,7 @@ var cSharp = new Audio('javascript/Audio/violin/Csharp.mp3');
 var c = new Audio('javascript/Audio/violin/C.mp3');
 var dSharp = new Audio('javascript/Audio/violin/Dsharp.mp3');
 var d = new Audio('javascript/Audio/violin/D.mp3');
-var e = new Audio('javascript/Audio/violin/E.mp3');
+var _e = new Audio('javascript/Audio/violin/E.mp3');
 var fSharp = new Audio('javascript/Audio/violin/Fsharp.mp3');
 var f = new Audio('javascript/Audio/violin/F.mp3');
 var gSharp = new Audio('javascript/Audio/violin/Gsharp.mp3');
@@ -26,6 +26,44 @@ var violinChords = {
         window.addEventListener('keyup', function (e) {
             vchords[e.keyCode] = false;
             vchords2[e.keyCode] = false;
+            if (e.keyCode==65){
+            	aSharp.pause();
+            	aSharp.currentTime = 0;
+            	a.pause();
+            	a.currentTime = 0;
+            }
+            if (e.keyCode==66){
+            	b.pause();
+            	b.currentTime = 0;
+            }
+            if (e.keyCode==67){
+            	cSharp.pause();
+            	cSharp.currentTime = 0;
+            	c.pause();
+            	c.currentTime = 0;
+            }
+            if (e.keyCode==68){
+            	dSharp.pause();
+            	dSharp.currentTime = 0;
+            	d.pause();
+            	d.currentTime = 0;
+            }
+            if (e.keyCode==69){
+            	_e.pause();
+            	_e.currentTime = 0;
+            }
+            if (e.keyCode==70){
+            	fSharp.pause();
+            	fSharp.currentTime = 0;
+            	f.pause();
+            	f.currentTime = 0;
+            }
+            if (e.keyCode==71){
+            	gSharp.pause();
+            	gSharp.currentTime = 0;
+            	g.pause();
+            	g.currentTime = 0;
+            }
         })
     }
 }
@@ -88,9 +126,9 @@ function updateVchords() {
 			vchords2[68] = true;
 		}
 		if (vchords[69]&&!vchords2[69]){
-			e.pause();
-			e.currentTime = 0;
-			e.play();
+			_e.pause();
+			_e.currentTime = 0;
+			_e.play();
 			vchords2[69] = true;
 		}
 		if (vchords[70]&&!vchords2[70]){
