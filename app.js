@@ -48,7 +48,11 @@ io.sockets.on('connection', function(socket) {
 	});
 
 	socket.on('updateUsername', function(username) {
-		socket.name = username; 
+		if (username == "") {
+			socket.name = "NoName"; 
+		} else {
+			socket.name = username;			
+		}
 	});
 
 	socket.on('newRoom', function(roomNumber) {
