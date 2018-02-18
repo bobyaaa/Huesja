@@ -281,7 +281,7 @@ function unpress(key){
 					document.getElementById("key31").style.backgroundColor="transparent";
                 }
                 else if (key==188){
-					document.getElementById("key36").style.backgroundColor="transparent";
+					document.getElementById("key37").style.backgroundColor="transparent";
                 }
             else if (key==83) { //black keys (S-H)
 					document.getElementById("key32").style.backgroundColor="transparent";
