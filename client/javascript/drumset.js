@@ -46,6 +46,7 @@ function updateDrums() {
         bass.play();
         drums2[32] = true;
         socket.emit('playDrums', 8);
+        socket.emit('highlightPlayer'); 
     }
     if (drums[82]&&!drums2[82]){
         crashcymbal.pause();
@@ -53,6 +54,7 @@ function updateDrums() {
         crashcymbal.play();
         drums2[82] = true;
         socket.emit('playDrums', 3);
+        socket.emit('highlightPlayer'); 
     }
     if (drums[85]&&!drums2[85]){
         ridecymbal.pause();
@@ -60,6 +62,7 @@ function updateDrums() {
         ridecymbal.play();
         drums2[85] = true;
         socket.emit('playDrums', 2);
+        socket.emit('highlightPlayer'); 
     }
     if (drums[84]&&!drums2[84]){
         tomtomlow.pause();
@@ -67,6 +70,7 @@ function updateDrums() {
         tomtomlow.play();
         drums2[84] = true;
         socket.emit('playDrums', 7);
+        socket.emit('highlightPlayer'); 
     }
     if (drums[89]&&!drums2[89]){
         tomtomhigh.pause();
@@ -74,6 +78,7 @@ function updateDrums() {
         tomtomhigh.play();
         drums2[89] = true;
         socket.emit('playDrums', 6);
+        socket.emit('highlightPlayer'); 
     }
     if (drums[71]&&!drums2[71]){
         snareshort.pause();
@@ -81,6 +86,7 @@ function updateDrums() {
         snareshort.currentTime = 0;
         drums2[71] = true;
         socket.emit('playDrums', 5);
+        socket.emit('highlightPlayer'); 
     }
     if (drums[72]&&!drums2[72]){
         snarelong.pause();
@@ -88,6 +94,7 @@ function updateDrums() {
         snarelong.play();
         drums2[72] = true;
         socket.emit('playDrums', 4);
+        socket.emit('highlightPlayer'); 
     }
     if (drums[87]&&!drums2[87]){
         if (drums[16]){
@@ -95,11 +102,13 @@ function updateDrums() {
             hihatclosed.currentTime = 0;
             hihatclosed.play();
             socket.emit('playDrums', 0);
+            socket.emit('highlightPlayer'); 
         }else{
             hihatopen.pause();
             hihatopen.currentTime = 0;
             hihatopen.play();
             socket.emit('playDrums', 1);
+            socket.emit('highlightPlayer'); 
         }
         drums2[87] = true;
     }

@@ -346,12 +346,12 @@
 				document.getElementById("wrapper2").innerHTML = '<div class="screenDrums"><div class="header3"><h class="poo">Drums</h></div><img src="images/drumset.png" class="book"><div class="crash"></div><div class="ride"></div><div class="tom1"></div><div class="tom2"></div><div class="hihat"></div><div class="snare"></div><div class="bass"></div></div>';
 			}
 
-		    document.getElementById("wrapper").innerHTML = "<div id='musicians'>Room Number:" + roomNumber + "</div><button onclick='globalSound()'>GlobalSound</button>";
+		    document.getElementById("wrapper").innerHTML = "<div class='roomNumber' id='musicians'>Room Number:" + roomNumber;
 		    
 		    for (var i in members) {
 			    var node = document.createElement("LI");
 			    node.setAttribute("id", String(IDlist[i]));
-			    console.log("123"); 
+			    node.setAttribute("class", 'node'); 
 			    console.log(IDlist[i]); 
 			    var textnode = document.createTextNode(members[i]);
 			    node.appendChild(textnode);
