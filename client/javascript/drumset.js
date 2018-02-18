@@ -10,7 +10,7 @@ var tomtomhigh = new Audio('javascript/Audio/drums/tomtomhigh.mp3');
 var tomtomlow = new Audio('javascript/Audio/drums/tomtomlow.mp3');
 var bass = new Audio('javascript/Audio/drums/bass.mp3');
 
-function start(){
+function startDrums(){
 	drumming.start();
 }
 

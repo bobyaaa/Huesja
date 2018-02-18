@@ -90,8 +90,7 @@ var pianoGb5 = new Audio('javascript/Audio/piano/Piano.ff.Gb5.mp3');
 var pianoGb6 = new Audio('javascript/Audio/piano/Piano.ff.Gb6.mp3');
 var pianoGb7 = new Audio('javascript/Audio/piano/Piano.ff.Gb7.mp3');
 
-
-function start(){
+function startPiano(){
 	pianoKeys.start();
 }
 
