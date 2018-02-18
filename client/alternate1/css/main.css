@@ -16,6 +16,7 @@ body{
 .book{
 	width:50vw;
 	height:65vh;
+	margin-left:25vw;
 }
 
 .input{
