@@ -34,7 +34,30 @@ body{
 	padding-bottom:2.5vh;
 }
 
+.circle{
+	border-radius:100px;
+	position:absolute;
+}
+
+#crash{
+	margin-top:20vh;
+	margin-left:20vw;
+	border-radius:100px;
+	position:absolute;
+}
+
 .header2{
+	font-family:"Raleway", sans-serif;
+	font-size:4vw;
+	color:white;
+	background-color:black;
+	padding-top:2.5vh;
+	padding-bottom:2.5vh;
+	text-align:center;
+	margin-bottom:10vh;
+}
+
+.header3{
 	font-family:"Raleway", sans-serif;
 	font-size:4vw;
 	color:white;
@@ -91,8 +114,9 @@ body{
 }
 
 .book{
-	width:30vw;
+	width:50vw;
 	height:30vw;
+	margin-left:25vw;
 }
 
 .multi{

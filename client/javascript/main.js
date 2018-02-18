@@ -6,6 +6,7 @@ $(document).ready(function(){
 	$(".screenViolin").hide();
 	$(".screenGuitar").hide();
 	$(".multiplayer").hide();
+	$(".header3").hide();
 
 	$(".solo").click(function(){
 		$(".screen1").fadeOut(250);
@@ -26,8 +27,10 @@ $(document).ready(function(){
 	});
 
 	$("#drums").click(function(){
+		$(".header3").fadeOut(10);
 		$(".screen2").fadeOut(250);
 		$(".screenDrums").fadeIn(250);
+		$(".header3").fadeIn(250);
 	});
 
 	$("#guitar").click(function(){
