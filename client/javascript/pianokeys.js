@@ -143,30 +143,336 @@ function startPiano(){
 	pianoKeys.start();
 }
 
+function unpress(key){
+	if (octave==1){
+            if (key==81){ //white keys (Q-U)
+					document.getElementById("key1").style.backgroundColor="transparent";
+            }
+            else if (key==87) {
+					document.getElementById("key2").style.backgroundColor="transparent";
+            }
+            else if (key==69) {
+					document.getElementById("key3").style.backgroundColor="transparent";
+            }
+            else if (key==82) {
+					document.getElementById("key4").style.backgroundColor="transparent";
+            }
+            else if (key==84) {
+					document.getElementById("key5").style.backgroundColor="transparent";
+            }
+            else if (key==89) {
+					document.getElementById("key6").style.backgroundColor="transparent";
+            }
+            else if (key==85) {
+					document.getElementById("key7").style.backgroundColor="transparent";
+                }
+            else if (key==50) { //black keys (2-6)
+					document.getElementById("key8").style.backgroundColor="transparent";
+            }
+            else if (key==51) {
+					document.getElementById("key9").style.backgroundColor="transparent";
+            }
+            else if (key==53) {
+					document.getElementById("key10").style.backgroundColor="transparent";
+            }
+            else if (key==54) {
+					document.getElementById("key11").style.backgroundColor="transparent";
+            }
+            else if (key==55) {
+					document.getElementById("key12").style.backgroundColor="transparent";
+            }
+            else if (key==90){ //white keys (Z-,)
+					document.getElementById("key13").style.backgroundColor="transparent";
+                }
+            else if (key==88) {
+					document.getElementById("key14").style.backgroundColor="transparent";
+            }
+            else if (key==67) {
+					document.getElementById("key15").style.backgroundColor="transparent";
+            }
+            else if (key==86) {
+					document.getElementById("key16").style.backgroundColor="transparent";
+            }
+            else if (key==66) {
+					document.getElementById("key17").style.backgroundColor="transparent";
+            }
+            else if (key==78) {
+					document.getElementById("key18").style.backgroundColor="transparent";
+            }
+            else if (key==77) {
+					document.getElementById("key19").style.backgroundColor="transparent";
+                }
+                else if (key==188){
+					document.getElementById("key20").style.backgroundColor="transparent";
+                }
+            else if (key==83) { //black keys (S-H)
+					document.getElementById("key21").style.backgroundColor="transparent";
+            }
+            else if (key==68) {
+					document.getElementById("key22").style.backgroundColor="transparent";
+            }
+            else if (key==71) {
+					document.getElementById("key23").style.backgroundColor="transparent";
+            }
+            else if (key==72) {
+					document.getElementById("key24").style.backgroundColor="transparent";
+            }
+            else if (key==74) {
+					document.getElementById("key25").style.backgroundColor="transparent";
+            }
+        }else if (octave==2){
+                if (key==81){ //white keys (Q-U)
+					document.getElementById("key13").style.backgroundColor="transparent";
+                }
+            else if (key==87) {
+					document.getElementById("key14").style.backgroundColor="transparent";
+            }
+            else if (key==69) {
+					document.getElementById("key15").style.backgroundColor="transparent";
+            }
+            else if (key==82) {
+					document.getElementById("key16").style.backgroundColor="transparent";
+            }
+            else if (key==84) {
+					document.getElementById("key17").style.backgroundColor="transparent";
+            }
+            else if (key==89) {
+					document.getElementById("key18").style.backgroundColor="transparent";
+            }
+            else if (key==85) {
+					document.getElementById("key19").style.backgroundColor="transparent";
+                }
+            else if (key==50) { //black keys (2-6)
+					document.getElementById("key21").style.backgroundColor="transparent";
+            }
+            else if (key==51) {
+					document.getElementById("key22").style.backgroundColor="transparent";
+            }
+            else if (key==53) {
+					document.getElementById("key23").style.backgroundColor="transparent";
+            }
+            else if (key==54) {
+					document.getElementById("key24").style.backgroundColor="transparent";
+            }
+            else if (key==55) {
+					document.getElementById("key25").style.backgroundColor="transparent";
+            }
+            else if (key==90){ //white keys (Z-,)
+					document.getElementById("key20").style.backgroundColor="transparent";
+                }
+            else if (key==88) {
+					document.getElementById("key26").style.backgroundColor="transparent";
+            }
+            else if (key==67) {
+					document.getElementById("key27").style.backgroundColor="transparent";
+            }
+            else if (key==86) {
+					document.getElementById("key28").style.backgroundColor="transparent";
+            }
+            else if (key==66) {
+					document.getElementById("key29").style.backgroundColor="transparent";
+            }
+            else if (key==78) {
+					document.getElementById("key30").style.backgroundColor="transparent";
+            }
+            else if (key==77) {
+					document.getElementById("key31").style.backgroundColor="transparent";
+                }
+                else if (key==188){
+					document.getElementById("key36").style.backgroundColor="transparent";
+                }
+            else if (key==83) { //black keys (S-H)
+					document.getElementById("key32").style.backgroundColor="transparent";
+            }
+            else if (key==68) {
+					document.getElementById("key33").style.backgroundColor="transparent";
+            }
+            else if (key==71) {
+					document.getElementById("key34").style.backgroundColor="transparent";
+            }
+            else if (key==72) {
+					document.getElementById("key35").style.backgroundColor="transparent";
+            }
+            else if (key==74) {
+					document.getElementById("key36").style.backgroundColor="transparent";
+            }
+        }else if (octave==3){
+                if (key==81){ //white keys (Q-U)
+					document.getElementById("key20").style.backgroundColor="transparent";
+                }
+            else if (key==87) {
+					document.getElementById("key26").style.backgroundColor="transparent";
+            }
+            else if (key==69) {
+					document.getElementById("key27").style.backgroundColor="transparent";
+            }
+            else if (key==82) {
+					document.getElementById("key28").style.backgroundColor="transparent";
+            }
+            else if (key==84) {
+					document.getElementById("key29").style.backgroundColor="transparent";
+            }
+            else if (key==89) {
+					document.getElementById("key30").style.backgroundColor="transparent";
+            }
+            else if (key==85) {
+					document.getElementById("key31").style.backgroundColor="transparent";
+                }
+            else if (key==50) { //black keys (2-6)
+					document.getElementById("key32").style.backgroundColor="transparent";
+            }
+            else if (key==51) {
+					document.getElementById("key33").style.backgroundColor="transparent";
+            }
+            else if (key==53) {
+					document.getElementById("key34").style.backgroundColor="transparent";
+            }
+            else if (key==54) {
+					document.getElementById("key35").style.backgroundColor="transparent";
+            }
+            else if (key==55) {
+					document.getElementById("key36").style.backgroundColor="transparent";
+            }
+            else if (key==90){ //white keys (Z-,)
+					document.getElementById("key37").style.backgroundColor="transparent";
+                }
+            else if (key==88) {
+					document.getElementById("key38").style.backgroundColor="transparent";
+            }
+            else if (key==67) {
+					document.getElementById("key39").style.backgroundColor="transparent";
+            }
+            else if (key==86) {
+					document.getElementById("key40").style.backgroundColor="transparent";
+            }
+            else if (key==66) {
+					document.getElementById("key41").style.backgroundColor="transparent";
+            }
+            else if (key==78) {
+					document.getElementById("key42").style.backgroundColor="transparent";
+            }
+            else if (key==77) {
+					document.getElementById("key43").style.backgroundColor="transparent";
+                }
+                else if (key==188){
+					document.getElementById("key49").style.backgroundColor="transparent";
+                }
+            else if (key==83) { //black keys (S-H)
+					document.getElementById("key44").style.backgroundColor="transparent";
+            }
+            else if (key==68) {
+					document.getElementById("key45").style.backgroundColor="transparent";
+            }
+            else if (key==71) {
+					document.getElementById("key46").style.backgroundColor="transparent";
+            }
+            else if (key==72) {
+					document.getElementById("key47").style.backgroundColor="transparent";
+            }
+            else if (key==74) {
+					document.getElementById("key48").style.backgroundColor="transparent";
+            }
+        }else if (octave==4){
+                if (key==81){ //white keys (Q-U)
+					document.getElementById("key37").style.backgroundColor="transparent";
+                }
+            else if (key==87) {
+					document.getElementById("key38").style.backgroundColor="transparent";
+            }
+            else if (key==69) {
+					document.getElementById("key39").style.backgroundColor="transparent";
+            }
+            else if (key==82) {
+					document.getElementById("key40").style.backgroundColor="transparent";
+            }
+            else if (key==84) {
+					document.getElementById("key41").style.backgroundColor="transparent";
+            }
+            else if (key==89) {
+					document.getElementById("key42").style.backgroundColor="transparent";
+            }
+            else if (key==85) {
+					document.getElementById("key43").style.backgroundColor="transparent";
+                }
+            else if (key==50) { //black keys (2-6)
+					document.getElementById("key44").style.backgroundColor="transparent";
+            }
+            else if (key==51) {
+					document.getElementById("key45").style.backgroundColor="transparent";
+            }
+            else if (key==53) {
+					document.getElementById("key46").style.backgroundColor="transparent";
+            }
+            else if (key==54) {
+					document.getElementById("key47").style.backgroundColor="transparent";
+            }
+            else if (key==55) {
+					document.getElementById("key48").style.backgroundColor="transparent";
+            }
+            else if (key==90){ //white keys (Z-,)
+					document.getElementById("key49").style.backgroundColor="transparent";
+                }
+            else if (key==88) {
+					document.getElementById("key50").style.backgroundColor="transparent";
+            }
+            else if (key==67) {
+					document.getElementById("key51").style.backgroundColor="transparent";
+            }
+            else if (key==86) {
+					document.getElementById("key52").style.backgroundColor="transparent";
+            }
+            else if (key==66) {
+					document.getElementById("key53").style.backgroundColor="transparent";
+            }
+            else if (key==78) {
+					document.getElementById("key54").style.backgroundColor="transparent";
+            }
+            else if (key==77) {
+					document.getElementById("key55").style.backgroundColor="transparent";
+                }
+                else if (key==188){
+					document.getElementById("key61").style.backgroundColor="transparent";
+                }
+            else if (key==83) { //black keys (S-H)
+					document.getElementById("key56").style.backgroundColor="transparent";
+            }
+            else if (key==68) {
+					document.getElementById("key57").style.backgroundColor="transparent";
+            }
+            else if (key==71) {
+					document.getElementById("key58").style.backgroundColor="transparent";
+            }
+            else if (key==72) {
+					document.getElementById("key59").style.backgroundColor="transparent";
+            }
+            else if (key==74) {
+					document.getElementById("key60").style.backgroundColor="transparent";
+            }
+        }
+
+}
+
 var pianoKeys = {
     start : function() {
-    	this.interval = setInterval(updateKeys,1);
+    	this.interval = setInterval(updateKeys,0);
         window.addEventListener('keydown', function (e) {
             keys[e.keyCode] = true;
         })
         window.addEventListener('keyup', function (e) {
             keys[e.keyCode] = false;
             keys2[e.keyCode] = false;
+            unpress(e.keyCode);
         })
     }
 }
 
 function keypress(key,ind){
-
 	piano[ind].pause();
 	piano[ind].currentTime = 0;
 	piano[ind].play();
 	keys2[key] = true;
 	var tempkey = "key" + String(ind+1);
 	document.getElementById(tempkey).style.backgroundColor="black";
-	setInterval(function(){
-		document.getElementById(tempkey).style.backgroundColor="transparent";
-	},250);
 	
 	socket.emit('highlightPlayer'); 
 	socket.emit('globalSound', ind);
