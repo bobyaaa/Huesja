@@ -161,6 +161,11 @@ function keypress(key,ind){
 	piano[ind].currentTime = 0;
 	piano[ind].play();
 	keys2[key] = true;
+	var tempkey = "key" + String(ind+1);
+	document.getElementById(tempkey).style.backgroundColor="black";
+	setInterval(function(){
+		document.getElementById(tempkey).style.backgroundColor="transparent";
+	},250);
 }
 
 function keypress2(ind){
@@ -168,8 +173,10 @@ function keypress2(ind){
 	piano[ind].currentTime = 0;
 	piano[ind].play();
 	var tempkey = "key" + String(ind+1);
-	console.log(tempkey);
 	document.getElementById(tempkey).style.backgroundColor="black";
+	setInterval(function(){
+		document.getElementById(tempkey).style.backgroundColor="transparent";
+	},250);
 }
 
 function updateKeys() {  
