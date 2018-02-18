@@ -20,6 +20,7 @@ body{
 }
 
 .book{
+	position:absolute;
 	width:75vw;
 	height:65vh;
 }
@@ -34,16 +35,44 @@ body{
 	padding-bottom:2.5vh;
 }
 
-.circle{
-	border-radius:100px;
+.crash{
 	position:absolute;
+	margin-top:3.1vh;
+	margin-left:39vw;
+	z-index:5;
+	border-radius:50%;
+	width:6vw;
+	padding-bottom:4vh;
+}
+.ride{
+	position:absolute;
+	margin-top:3.1vh;
+	margin-left:56vw;
+	z-index:5;
+	border-radius:50%;
+	width:6vw;
+	padding-bottom:4vh;
 }
 
-#crash{
-	margin-top:20vh;
-	margin-left:20vw;
-	border-radius:100px;
+.tom1{
 	position:absolute;
+	margin-top:14vh;
+	margin-left:46.4vw;
+	z-index:5;
+	border-radius:50%;
+	width:6vw;
+	padding-bottom:4vh;
+}
+
+.ride:hover{
+	cursor:pointer;
+}
+
+.crash:hover{
+	cursor:pointer;
+}
+.tom1:hover{
+	cursor:pointer;
 }
 
 .header2{
