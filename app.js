@@ -92,6 +92,17 @@ io.sockets.on('connection', function(socket) {
 		}
 	});
 
+	socket.on('globalSound', function() {
+		var roomNumber = socket.room;
+
+		for (var i in SOCKET_LIST) {
+			if (SOCKET_LIST[i].room == roomNumber) {
+				temp = SOCKET_LIST[i];
+				temp.emit('playSound');
+			}
+		}
+	});
+
 	//Quit functionality below
 	socket.on('disconnect', function() {
 		var roomNumber = socket.room;
