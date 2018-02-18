@@ -318,6 +318,12 @@
 			drum[number].play(); 
 		});
 
+		socket.on('playGuitar', function(number, SocketID) {
+			guitar[number].pause();
+			guitar[number].currentTime = 0;
+			guitar[number].play(); 
+		});
+
 		socket.on('highlightMe', function(ID) {
 			var user = document.getElementById(String(ID));
 			var rand1 = Math.floor(Math.random() * 256);

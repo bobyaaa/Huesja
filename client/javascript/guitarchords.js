@@ -10,6 +10,12 @@ var fMajor = new Audio('javascript/Audio/guitar/F-major.mp3');
 var gMajor = new Audio('javascript/Audio/guitar/G-major.mp3');
 
 guitar.push(aMajor); 
+guitar.push(bMajor);
+guitar.push(cMajor);
+guitar.push(dMajor);
+guitar.push(eMajor); 
+guitar.push(fMajor);
+guitar.push(gMajor); 
 
 function startGuitar(){
 	guitarChords.start();
@@ -34,41 +40,55 @@ function updateChords() {
 		aMajor.currentTime = 0;
 		aMajor.play();
 		chords2[65] = true;
+		socket.emit('playGuitar', 0);
+        socket.emit('highlightPlayer'); 
 	}
 	if (chords[66]&&!chords2[66]){
 		bMajor.pause();
 		bMajor.currentTime = 0;
 		bMajor.play();
 		chords2[66] = true;
+		socket.emit('playGuitar', 1);
+		socket.emit('highlightPlayer'); 
 	}
 	if (chords[67]&&!chords2[67]){
 		cMajor.pause();
 		cMajor.currentTime = 0;
 		cMajor.play();
 		chords2[67] = true;
+		socket.emit('playGuitar', 2);
+		socket.emit('highlightPlayer'); 
 	}
 	if (chords[68]&&!chords2[68]){
 		dMajor.pause();
 		dMajor.currentTime = 0;
 		dMajor.play();
 		chords2[68] = true;
+		socket.emit('playGuitar', 3);
+		socket.emit('highlightPlayer'); 
 	}
 	if (chords[69]&&!chords2[69]){
 		eMajor.pause();
 		eMajor.currentTime = 0;
 		eMajor.play();
 		chords2[69] = true;
+		socket.emit('playGuitar', 4);
+		socket.emit('highlightPlayer'); 
 	}
 	if (chords[70]&&!chords2[70]){
 		fMajor.pause();
 		fMajor.currentTime = 0;
 		fMajor.play();
 		chords2[70] = true;
+		socket.emit('playGuitar', 5);
+		socket.emit('highlightPlayer'); 
 	}
 	if (chords[71]&&!chords2[71]){
 		gMajor.pause();
 		gMajor.currentTime = 0;
 		gMajor.play();
 		chords2[71] = true;
+		socket.emit('playGuitar', 6);
+		socket.emit('highlightPlayer'); 
 	}
 }
